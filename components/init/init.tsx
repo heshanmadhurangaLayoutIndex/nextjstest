@@ -4,17 +4,13 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
+import { initService } from "@/api/service/initService";
 
 export default function INIT({ children }: { children: React.ReactNode }) {
+  // Handle use query
   const { data, isLoading } = useQuery({
     queryKey: ["header"],
-    queryFn: async () => {
-      const res = await axios.post("https://cinesync-api.layoutindex.dev/api_v2/web/index/init", {
-        cinema_id: 3,
-        sales_channel_id: 1,
-      });
-      return res.data;
-    },
+    queryFn: initService,
   });
 
   return (

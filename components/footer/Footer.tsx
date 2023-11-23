@@ -1,7 +1,11 @@
+"use Client";
+
 export interface Menu {
   footer_nav_1: any[];
   footer_nav_2: any[];
 }
+
+// this footer Component is Server Side Rendering
 export default function Footer({ data }: { data: Menu }) {
   return (
     <footer className="bg-neutral-100 text-center dark:bg-neutral-600 lg:text-left">

@@ -1,3 +1,5 @@
+"use Client";
+
 import Link from "next/link";
 
 export interface Menu {
@@ -14,6 +16,7 @@ export interface Nav {
   sub_menus: any[];
 }
 
+// this header Component is Server Side Rendering
 export default function Header({ header_nav, main_nav, isLoading }: Menu) {
   return (
     <header className="bg-white">
