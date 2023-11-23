@@ -1,7 +1,3 @@
-interface pageProps {
-  params: { url: string };
-}
-
 export default function page({ params }: any) {
   console.log(params);
   return (

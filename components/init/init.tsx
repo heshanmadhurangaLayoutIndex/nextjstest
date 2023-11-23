@@ -8,8 +8,6 @@ import Footer from "../footer/Footer";
 export default function INIT({ children }: { children: React.ReactNode }) {
   const { data, isLoading } = useQuery({
     queryKey: ["header"],
-    retry: false,
-
     queryFn: async () => {
       const res = await axios.post("https://cinesync-api.layoutindex.dev/api_v2/web/index/init", {
         cinema_id: 3,
