@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ReactQueryProvider from "@/util/provider/ReactQueryProvider";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
+import INIT from "@/components/init/init";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,8 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <ReactQueryProvider>
-          <Header />
-          {children}
+          <INIT>{children}</INIT>
         </ReactQueryProvider>
       </body>
     </html>
